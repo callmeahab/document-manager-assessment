@@ -20,6 +20,7 @@ The client project is a [Create React App](https://create-react-app.dev/) that h
 1. Navigate to the client/doc-manager directory.
 2. `$ npm install` to install the dependencies.
 3. `$ npm start` to start the React development server.
+4. For testing purposes make sure to put your user's token in `client/doc-manager/src/utils.js` file for `AUTHORIZATION_HEADER`
 
 ##
 
