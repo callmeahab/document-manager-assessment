@@ -8,12 +8,14 @@ file_versions = [
     'statute_document',
 ]
 
+
 class Command(BaseCommand):
     help = "Load basic file version fixtures"
 
     def handle(self, *args, **options):
         for file_name in file_versions:
             FileVersion.objects.create(
+                path=f'/{file_name}.pdf',
                 file_name=file_name,
                 version_number=1
             )

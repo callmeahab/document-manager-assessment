@@ -6,13 +6,17 @@ from django.views import defaults as default_views
 from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
 
+from propylon_document_manager.file_versions.api import views
+
 # API URLS
 urlpatterns = [
     # API base url
     path("api/", include("propylon_document_manager.site.api_router")),
+    path("admin/", admin.site.urls),
     # DRF auth token
     path("api-auth/", include("rest_framework.urls")),
     path("auth-token/", obtain_auth_token),
+    path("accounts/", include("allauth.urls")),
 ]
 
 if settings.DEBUG:
