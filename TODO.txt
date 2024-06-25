@@ -1,5 +1,6 @@
 TODO
 
+- Fix fixtures
 - File version unit tests
 - Group files by uploaded_path and expand that list for older versions
 - Displaying downloaded files and showing differences
